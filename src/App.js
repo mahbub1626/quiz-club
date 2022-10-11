@@ -2,6 +2,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
+import Home from './components/Home/Home';
 import Quiz from './components/Quiz/Quiz';
 import Main from './layout/Main';
 
@@ -12,19 +13,29 @@ function App() {
       element: <Main></Main>,
       children: [
         {
-          path: '/',
-          // loader: () => fetch('tshirts.json'),
+          path: '',
+          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+          element: <Home></Home>
+        },
+        {
+          path: 'home',
+          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+          element: <Home></Home>
+        },
+        
+        {
+          path: 'quiz',
+          // loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+          element:<Quiz></Quiz>
+        },
+        {
+          path: 'quiz/:quizId',
+          loader: ({params}) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`),
           element:<Quiz></Quiz>
         },
         
         {
-          path: '/quiz',
-          // loader: () => fetch('tshirts.json'),
-          element:<Quiz></Quiz>
-        },
-        
-        {
-          path: '/about',
+          path: 'about',
           // loader: () => fetch('tshirts.json'),
           element:<About></About>
         },

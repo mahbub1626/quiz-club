@@ -1,20 +1,15 @@
 import React from 'react';
+import Logo from '../../QC-logo.png'
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div className='flex flex-row'>
-            <div>
-            <h2>This is header</h2>
-            </div>
-            <div>
-            <nav>
-                <NavLink to='/quiz'>Quiz</NavLink>
-                <NavLink to='/'></NavLink>
-                <NavLink to='/about'>About</NavLink>
+            <nav className=' flex flex-row bg-purple-500 justify-around text-white'>
+                <NavLink className='ml-4' to='/'><img src={Logo} alt="" /> </NavLink>
+                <NavLink className='ml-4' to='/Home'>Home</NavLink>
+                <NavLink className='ml-4' to='/quiz'>Quiz</NavLink>
+                <NavLink className='ml-4' to='/about'>About</NavLink>
             </nav>
-            </div>
-        </div>
     );
 };
 
