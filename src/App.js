@@ -9,7 +9,7 @@ import Main from './layout/Main';
 function App() {
   const router = createBrowserRouter([
     {
-      path:'/',
+      path: '/',
       element: <Main></Main>,
       children: [
         {
@@ -22,33 +22,31 @@ function App() {
           loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Home></Home>
         },
-        
+
         {
           path: 'quiz',
           // loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
-          element:<Quiz></Quiz>
+          element: <Quiz></Quiz>
         },
         {
           path: 'quiz/:quizId',
-          loader: ({params}) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`),
-          element:<Quiz></Quiz>
+          loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`),
+          element: <Quiz></Quiz>
         },
-        
+
         {
           path: 'about',
           // loader: () => fetch('tshirts.json'),
-          element:<About></About>
+          element: <About></About>
         },
+
         
       ]
     }
-      ]);
+  ]);
   return (
     <div className="App">
       <RouterProvider router={router}>
-
-
-
       </RouterProvider>
     </div>
   );
