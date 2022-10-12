@@ -5,7 +5,8 @@ import 'react-toastify/dist/ReactToastify.css';
 const Options = ({ id, op, correctAnswer }) => {
     // console.log(correctAnswer);
 
-    const { ans, setAns } = useState({})
+    // const { ans, setAns } = useState({})
+    
     const handlerAns = (cr) => {
         console.log(cr);
         if (cr === correctAnswer) {
