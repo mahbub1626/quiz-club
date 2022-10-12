@@ -24,10 +24,10 @@ const Options = ({ id, op, correctAnswer }) => {
     return (
 
 
-        <li className='bg-gray-300 m-4 p-4'>
+        <li className='bg-gray-300 m-4 p-4' onClick={() => handlerAns(op)}>
 
 
-            <label for={op} onClick={() => handlerAns(op)}>
+            <label className='bg-gray-300' for={op} >
                 <input name={id} id={op} type="radio" />{op}
             </label>
             <ToastContainer />

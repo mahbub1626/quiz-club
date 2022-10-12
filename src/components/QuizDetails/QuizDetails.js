@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Options from '../Options/Options';
-
+import { EyeIcon } from '@heroicons/react/24/solid';
 import Modal from '../Modal/Modal';
 
 const QuizDetails = ({ q }) => {
@@ -9,12 +9,12 @@ const QuizDetails = ({ q }) => {
     // console.log(correctAnswer);
     const correct = correctAnswer;
 
-    const {cr, setCr} = useState()
 
     const handleAnsEye = correct => {
-        // console.log(correct)
-        setCr(correct);
-        alert({correct})
+        console.log(correct);
+        alert(`${correct}`,{
+            position:"top-center"
+        })
     }
 
     return (
@@ -25,12 +25,16 @@ const QuizDetails = ({ q }) => {
                     <h2>Ans: {correctAnswer}</h2>
                 </div>
                 <div>
+                    <p onClick={() => handleAnsEye(correct)} htmlFor="my-modal" className="btn modal-button">
 
-                    <Modal
+                    <EyeIcon className="h-6 w-6 text-blue-500" />
+
+                    </p>
+                    {/* <Modal
                         cr={cr}
                         correct={correct}
                         handleAnsEye={handleAnsEye}
-                    ></Modal>
+                    ></Modal> */}
 
                 </div>
             </div>
