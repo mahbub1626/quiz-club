@@ -18,11 +18,11 @@ const Home = () => {
     return (
         <div className='container m-auto'>
             <div className='w-100'>
-                <img className='w-100 h-112' src={Banner} alt="header banner" />
+                <img className='w-full h-112' src={Banner} alt="header banner" />
             </div>
-            <h2>Select a topic and start: {quizTopics.length}</h2>
+            <h2 className='text-4xl font-bold text-rose-500 mt-4 '>Select a topic to start</h2>
 
-            <div className='grid grid-cols-4'>
+            <div className='grid md:grid-cols-3 gap-6 my-8'>
                 {
                     quizTopics.map(topic => <Topic
                         key={topic.id}

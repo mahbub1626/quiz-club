@@ -1,12 +1,20 @@
 import React from 'react';
 
 
-const Options = ({ op }) => {
+const Options = ({ key, op }) => {
+
     return (
-        <button>
-            <input type="radio" />
-            <li className='bg-cyan-300 p-2 m-2 text-left'>{op}</li>
-        </button>
+
+
+            <li>
+                <input  id={key} type="radio" />
+            <label for={key}>{op}</label>
+            {/* <li className='bg-cyan-300 p-2 m-2 text-left'></li> */}
+            {/* <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">{op}</label><br></br> */}
+            </li>
+
+    
     );
 };
 

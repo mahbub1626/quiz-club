@@ -14,7 +14,7 @@ const QuizDetails = ({ q }) => {
                     {/* <h2>{correctAnswer}</h2> */}
                 </div>
             </div>
-            <ul className=''>
+            <ul className='flex flex-col-1'>
                 {
                     options.map(op => <Options
                         key={op.id}
