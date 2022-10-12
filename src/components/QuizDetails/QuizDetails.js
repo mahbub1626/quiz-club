@@ -22,7 +22,6 @@ const QuizDetails = ({ q }) => {
             <div className='flex bg-purple-800 justify-center items-center'>
                 <div className=' p-4 m-2 text-white'>
                     <h2>Quiz: {question}</h2>
-                    <h2>Ans: {correctAnswer}</h2>
                 </div>
                 <div>
                     <p onClick={() => handleAnsEye(correct)} htmlFor="my-modal" className="btn modal-button">
