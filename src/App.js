@@ -2,9 +2,11 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
+import Blog from './components/Blog/Blog';
 import Error from './components/Error/Error';
 import Home from './components/Home/Home';
 import Quiz from './components/Quiz/Quiz';
+import Statistic from './components/Statistic/Statistic';
 import Main from './layout/Main';
 
 function App() {
@@ -36,17 +38,25 @@ function App() {
         },
 
         {
+          path: 'statistic',
+          element: <Statistic></Statistic>
+        },
+        {
+          path: 'blog',
+          element: <Blog></Blog>
+        },
+        {
           path: 'about',
-          // loader: () => fetch('tshirts.json'),
           element: <About></About>
+        },
+        {
+          path: '/*',
+          element: <Error></Error>
         }, 
       ]
       
     },
-    {
-      path: '/*',
-      element: <Error></Error>
-    },
+    
   ]);
   return (
     <div className="App">

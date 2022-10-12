@@ -1,17 +1,22 @@
 import React from 'react';
+import { EyeIcon } from '@heroicons/react/24/solid';
+const Modal = ({id, correctAnswer, handleCurrectAnswere}) => {
 
-const Modal = () => {
     return (
         <div>
 
-            <label htmlFor="my-modal" className="btn modal-button">open modal</label>
+            <label onClick={() => handleCurrectAnswere(correctAnswer)} htmlFor="my-modal" className="btn modal-button">
+
+                    <EyeIcon className="h-6 w-6 text-blue-500" />
+
+            </label>
 
 
             <input type="checkbox" id="my-modal" className="modal-toggle" />
             <div className="modal">
                 <div className="modal-box">
-                    <h3 className="font-bold text-lg">Congratulations random Internet user!</h3>
-                    <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                    <h3 className="font-bold text-lg">Correct Answer!</h3>
+                    <p className="py-4">{correctAnswer}</p>
                     <div className="modal-action">
                         <label htmlFor="my-modal" className="btn">Yay!</label>
                     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Options from '../Options/Options';
-import { EyeIcon } from '@heroicons/react/24/solid';
+
 import Modal from '../Modal/Modal';
 
 const QuizDetails = ({ q }) => {
@@ -19,9 +19,14 @@ const QuizDetails = ({ q }) => {
                     {/* <h2>Quiz  {id}: {ques}</h2> */}
                 </div>
                 <div>
-                    <button onClick={() => handleCurrectAnswere(correctAnswer)}><EyeIcon className="h-6 w-6 text-blue-500" /></button>
+                   
                     {/* <h2>{correctAnswer}</h2> */}
-                    <Modal></Modal>
+                    <Modal
+                    key={id}
+                    id={id}
+                    handleCurrectAnswere={handleCurrectAnswere}
+                    correctAnswer={correctAnswer}
+                    ></Modal>
                 </div>
             </div>
             <ul className=''>
