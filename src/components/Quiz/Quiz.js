@@ -6,14 +6,14 @@ const Quiz = () => {
     const data = useLoaderData();
     const quiz = data.data;
     const { name, questions } = quiz;
-    const quizQ = questions;
+    // const quizQ = questions;
     // console.log(quizQ);
     return (
         <div className=''>
             <h2 className='p-6 text-3xl font-bold text-purple-700'>{name}</h2>
             <div>
             {
-                quizQ.map(q => <QuizDetails
+                questions.map(q => <QuizDetails
                 key={q.id}
                 q={q}
                 ></QuizDetails>)

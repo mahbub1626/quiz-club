@@ -13,7 +13,7 @@ const Topic = ({ topic, handleQuizStart }) => {
                 <p>If a dog chews shoes whose shoes does he choose?</p>
 
                 <div className="card-actions justify-between">
-                    <button className="btn btn-outline btn-accent ">Q-{total}</button>
+                    <button className="btn btn-outline btn-accent ">Total-{total}</button>
                     <button className="btn btn-outline btn-secondary btn-square loading px-2">
                         <BookOpenIcon className="h-6 w-6 text-blue-500" />
                     </button>
